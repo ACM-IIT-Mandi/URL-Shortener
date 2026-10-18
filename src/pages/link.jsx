@@ -76,11 +76,11 @@ const LinkPage = () => {
             {url?.title}
           </span>
           <a
-            href={`https://trimrr.in/${link}`}
+            href={`${window.location.origin}/${link}`}
             target="_blank"
-            className="text-3xl sm:text-4xl text-blue-400 font-bold hover:underline cursor-pointer"
+            className="text-3xl sm:text-4xl text-blue-400 font-bold hover:underline cursor-pointer break-all"
           >
-            https://trimrr.in/{link}
+            {window.location.origin}/{link}
           </a>
           <a
             href={url?.original_url}
@@ -97,7 +97,7 @@ const LinkPage = () => {
             <Button
               variant="ghost"
               onClick={() =>
-                navigator.clipboard.writeText(`https://trimrr.in/${link}`)
+                navigator.clipboard.writeText(`${window.location.origin}/${link}`)
               }
             >
               <Copy />
